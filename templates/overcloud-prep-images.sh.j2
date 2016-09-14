@@ -24,6 +24,7 @@ openstack overcloud image upload {% if bash_deploy_ramdisk %}--old-deploy-image{
 ## * Register nodes with Ironic.
 ## ::
 
+sudo systemctl restart openstack-ironic-conductor
 openstack baremetal import --json instackenv.json
 openstack baremetal configure boot
 
