@@ -30,9 +30,30 @@ openstack baremetal configure boot
 ## * Introspect hardware attributes of nodes.
 ## ::
 
-openstack baremetal introspection bulk start
+#set to manageable
+for node in `ironic node-list | awk '/available/ {print $2}'`; do
+  ironic node-set-provision-state $node manage
+done
+
+#start introspection
+for node in `ironic node-list | awk '/available/ {print $2}'`; do
+  openstack baremetal introspection start $node
+  sleep 30s
+done
+
+#wait for all nodes to be off
+set +e
+while true; do
+ ironic node-list | grep -q "power on" && break
+ sleep 10s
+done
+set -e
+
+#set to available
+for node in `ironic node-list | awk '/manage/ {print $2}'`; do
+  ironic node-set-provision-state $node provide
+done
 
 {% endif %}
-
 
 ### --stop_docs
