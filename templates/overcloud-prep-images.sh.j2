@@ -9,6 +9,32 @@ set -eux
 ## Prepare Your Environment
 ## ------------------------
 
+## * Introspect all manageable nodes with a caller provided timeout.
+##   then move all nodes that power off after a successful introspection
+##   back to available so we don't introspect them again.
+## ::
+
+introspect()
+{
+  for node in `ironic node-list | awk '/manage/ {print $2}'`; do
+    openstack baremetal introspection start $node
+    sleep 30s
+  done
+
+  set +e
+  timeout $1 bash -c -- 'source $HOME/stackrc; \
+                         while [ $? -eq 0 ]; do \
+                            sleep 10s; \
+                            ironic node-list | grep -q "power on"; \
+                         done'
+  set -e
+
+  for node in `ironic node-list | awk '/manage/' | awk '/power off/ {print $2}'`; do
+    ironic node-set-provision-state $node provide
+  done
+}
+
+
 ## * Source in the undercloud credentials.
 ## ::
 
@@ -30,9 +56,15 @@ openstack baremetal configure boot
 ## * Introspect hardware attributes of nodes.
 ## ::
 
-openstack baremetal introspection bulk start
+for node in `ironic node-list | awk '/available/ {print $2}'`; do
+  ironic node-set-provision-state $node manage
+done
+
+introspect 15m
+introspect 30m
+introspect 60m
+
 
 {% endif %}
-
 
 ### --stop_docs
