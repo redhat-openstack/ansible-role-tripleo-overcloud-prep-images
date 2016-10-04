@@ -1,0 +1,188 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "baa041b7_4cbaab0c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1001800
+      },
+      "writtenOn": "2016-10-04T14:21:05Z",
+      "side": 1,
+      "message": "deprecated",
+      "range": {
+        "startLine": 9,
+        "startChar": 31,
+        "endLine": 9,
+        "endChar": 41
+      },
+      "revId": "c60dcbd39c68660c7c5d9f037064edf1cdd1df92",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_2cb76722",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1001800
+      },
+      "writtenOn": "2016-10-04T14:21:05Z",
+      "side": 1,
+      "message": "solution",
+      "range": {
+        "startLine": 15,
+        "startChar": 32,
+        "endLine": 15,
+        "endChar": 40
+      },
+      "revId": "c60dcbd39c68660c7c5d9f037064edf1cdd1df92",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_ec3bbf9a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1001800
+      },
+      "writtenOn": "2016-10-04T14:21:05Z",
+      "side": 1,
+      "message": "Please add WIP (work in progress) in the summary line if you\u0027re not ready to submit this. If it\u0027s (potentially) ready, don\u0027t keep this line here.",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 39
+      },
+      "revId": "c60dcbd39c68660c7c5d9f037064edf1cdd1df92",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_acddb742",
+        "filename": "templates/overcloud-prep-images.sh.j2",
+        "patchSetId": 3
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1001800
+      },
+      "writtenOn": "2016-10-04T14:21:05Z",
+      "side": 1,
+      "message": "Just a nitpick, but if you\u0027re already using awk, use it instead of grep too.\n\n    ironic node-list | awk \u0027/available/ {print $2}\u0027\n\nor just use cut\n\n    ironic node-list | grep available | cut -d\u0027 \u0027 -f2\n\nSame for the rest of the commands.",
+      "range": {
+        "startLine": 34,
+        "startChar": 32,
+        "endLine": 34,
+        "endChar": 64
+      },
+      "revId": "c60dcbd39c68660c7c5d9f037064edf1cdd1df92",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_6c6faf92",
+        "filename": "templates/overcloud-prep-images.sh.j2",
+        "patchSetId": 3
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1001800
+      },
+      "writtenOn": "2016-10-04T14:21:05Z",
+      "side": 1,
+      "message": "s/kick off/start/\n\nIt\u0027s better to not use slang to increase clarity.",
+      "range": {
+        "startLine": 38,
+        "startChar": 1,
+        "endLine": 38,
+        "endChar": 9
+      },
+      "revId": "c60dcbd39c68660c7c5d9f037064edf1cdd1df92",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_8c72f37a",
+        "filename": "templates/overcloud-prep-images.sh.j2",
+        "patchSetId": 3
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1001800
+      },
+      "writtenOn": "2016-10-04T14:21:05Z",
+      "side": 1,
+      "message": "This seems like a really long wait per node, wouldn\u0027t ~30 sec be enough to avoid timeouts?",
+      "range": {
+        "startLine": 41,
+        "startChar": 8,
+        "endLine": 41,
+        "endChar": 10
+      },
+      "revId": "c60dcbd39c68660c7c5d9f037064edf1cdd1df92",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_ecba9fbf",
+        "filename": "templates/overcloud-prep-images.sh.j2",
+        "patchSetId": 3
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1001800
+      },
+      "writtenOn": "2016-10-04T14:21:05Z",
+      "side": 1,
+      "message": "would be better to use an infinite loop and `break` out of it when it\u0027s true rather than having the command twice here.\n\ne.g.\n\n    while true; do\n        ironic node-list | grep -q \"power on\" \u0026\u0026 break\n    done",
+      "range": {
+        "startLine": 46,
+        "startChar": 0,
+        "endLine": 46,
+        "endChar": 37
+      },
+      "revId": "c60dcbd39c68660c7c5d9f037064edf1cdd1df92",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_eca5ffb4",
+        "filename": "templates/overcloud-prep-images.sh.j2",
+        "patchSetId": 3
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1001800
+      },
+      "writtenOn": "2016-10-04T14:21:05Z",
+      "side": 1,
+      "message": "Introduce a short sleep here to not burn up the CPU of the undercloud.",
+      "range": {
+        "startLine": 48,
+        "startChar": 1,
+        "endLine": 48,
+        "endChar": 7
+      },
+      "revId": "c60dcbd39c68660c7c5d9f037064edf1cdd1df92",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
