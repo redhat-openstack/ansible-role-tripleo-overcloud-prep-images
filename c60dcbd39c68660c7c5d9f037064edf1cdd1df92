@@ -94,6 +94,30 @@
     },
     {
       "key": {
+        "uuid": "baa041b7_beaf00e2",
+        "filename": "templates/overcloud-prep-images.sh.j2",
+        "patchSetId": 3
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1008588
+      },
+      "writtenOn": "2016-10-11T11:59:06Z",
+      "side": 1,
+      "message": "I need to get more familiar with awk, that\u0027s very useful.",
+      "parentUuid": "baa041b7_acddb742",
+      "range": {
+        "startLine": 34,
+        "startChar": 32,
+        "endLine": 34,
+        "endChar": 64
+      },
+      "revId": "c60dcbd39c68660c7c5d9f037064edf1cdd1df92",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "baa041b7_6c6faf92",
         "filename": "templates/overcloud-prep-images.sh.j2",
         "patchSetId": 3
@@ -140,6 +164,30 @@
     },
     {
       "key": {
+        "uuid": "baa041b7_1ea02cf3",
+        "filename": "templates/overcloud-prep-images.sh.j2",
+        "patchSetId": 3
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1008588
+      },
+      "writtenOn": "2016-10-11T11:59:06Z",
+      "side": 1,
+      "message": "tuned down to 30 sec, I was dealing with nodes that took forever to introspect for various reasons.",
+      "parentUuid": "baa041b7_8c72f37a",
+      "range": {
+        "startLine": 41,
+        "startChar": 8,
+        "endLine": 41,
+        "endChar": 10
+      },
+      "revId": "c60dcbd39c68660c7c5d9f037064edf1cdd1df92",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "baa041b7_ecba9fbf",
         "filename": "templates/overcloud-prep-images.sh.j2",
         "patchSetId": 3
@@ -151,6 +199,30 @@
       "writtenOn": "2016-10-04T14:21:05Z",
       "side": 1,
       "message": "would be better to use an infinite loop and `break` out of it when it\u0027s true rather than having the command twice here.\n\ne.g.\n\n    while true; do\n        ironic node-list | grep -q \"power on\" \u0026\u0026 break\n    done",
+      "range": {
+        "startLine": 46,
+        "startChar": 0,
+        "endLine": 46,
+        "endChar": 37
+      },
+      "revId": "c60dcbd39c68660c7c5d9f037064edf1cdd1df92",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_dea52403",
+        "filename": "templates/overcloud-prep-images.sh.j2",
+        "patchSetId": 3
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1008588
+      },
+      "writtenOn": "2016-10-11T11:59:06Z",
+      "side": 1,
+      "message": "I know the \u0026\u0026 command did that but I never really thought about how to use it. Much better than my poor do-while loop implementation. Thanks!",
+      "parentUuid": "baa041b7_ecba9fbf",
       "range": {
         "startLine": 46,
         "startChar": 0,
