@@ -19,6 +19,15 @@ source {{ working_dir }}/stackrc
 
 openstack overcloud image upload {% if bash_deploy_ramdisk %}--old-deploy-image{% endif %}
 
+{% if containerized_compute %}
+## * Download the Fedora Cloud Atomic Image and upload to glance
+## ::
+
+wget {{ container_url }}
+glance image-create --name atomic-image --file {{ container_image }} --disk-format qcow2 --container-format bare
+
+{% endif %}
+
 ## * Register nodes with Ironic.
 ## ::
 

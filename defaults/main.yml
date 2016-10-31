@@ -4,5 +4,10 @@ overcloud_prep_images_log: "{{ working_dir }}/overcloud_prep_images.log"
 step_introspect: false
 bash_deploy_ramdisk: false
 step_install_undercloud: true
+containerized_compute: false
+container_image: Fedora-Cloud-Atomic-22-20150521.x86_64.qcow2
+container_url: "https://download.fedoraproject.org/pub/fedora/linux/releases/22/Cloud/x86_64/Images/{{ container_image }}"
+
+
 
 
