@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "baa041b7_db3efdb8",
+        "filename": "templates/overcloud-prep-images.sh.j2",
+        "patchSetId": 8
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1006607
+      },
+      "writtenOn": "2016-11-01T15:58:59Z",
+      "side": 1,
+      "message": "If we are going to be calling this function (lines 65-67) we should include it in the documentation as well.",
+      "revId": "79e54e6b2c7754f7c37df32c3e49b66f56e069f9",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
