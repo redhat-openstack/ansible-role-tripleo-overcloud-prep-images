@@ -16,6 +16,24 @@
       "revId": "3707f4979d81130a2445bae51a176fd180df4f1c",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_2f32405f",
+        "filename": "templates/overcloud-prep-images.sh.j2",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1006607
+      },
+      "writtenOn": "2016-11-02T22:59:21Z",
+      "side": 1,
+      "message": "It might be appropriate to just add a \n\n.. note:: Workaround for BZ: ...",
+      "parentUuid": "baa041b7_0f009c65",
+      "revId": "3707f4979d81130a2445bae51a176fd180df4f1c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
