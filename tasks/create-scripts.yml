@@ -5,3 +5,9 @@
     src: "{{ overcloud_prep_images_script }}"
     dest: "{{ working_dir }}/overcloud-prep-images.sh"
     mode: 0755
+
+- name: Create disk size hint script
+  template:
+    src: "{{ add_disk_size_hint_script }}"
+    dest: "{{ working_dir }}/add-disk-size-hint.sh"
+    mode: 0755

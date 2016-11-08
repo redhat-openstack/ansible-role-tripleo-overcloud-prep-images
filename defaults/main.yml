@@ -1,8 +1,10 @@
 overcloud_prep_images_script: overcloud-prep-images.sh.j2
 overcloud_prep_images_log: "{{ working_dir }}/overcloud_prep_images.log"
+add_disk_size_hint_script: add-disk-size-hint.sh.j2
+add_disk_size_hint_log: "{{ working_dir }}/add_disk_size_hint.log"
 
 step_introspect: false
 bash_deploy_ramdisk: false
 step_install_undercloud: true
-
-
+step_root_device_size: false
+disk_root_device_size: 1843
