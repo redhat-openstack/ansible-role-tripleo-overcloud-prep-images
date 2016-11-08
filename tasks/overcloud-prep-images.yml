@@ -3,3 +3,9 @@
     {{ working_dir }}/overcloud-prep-images.sh > \
     {{ overcloud_prep_images_log }} 2>&1
 
+- name:  Apply disk size hints to introspection run
+  shell: >
+    {{ working_dir }}/add-disk-size-hint.sh > \
+    {{ add_disk_size_hint_log }} 2>&1
+  when: step_root_device_size
+
