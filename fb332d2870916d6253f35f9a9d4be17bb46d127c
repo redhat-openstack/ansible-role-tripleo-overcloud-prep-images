@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "baa041b7_9bf287e2",
+        "filename": "defaults/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1001800
+      },
+      "writtenOn": "2016-11-10T17:42:03Z",
+      "side": 1,
+      "message": "Please document the new variables in the README.md file",
+      "revId": "fb332d2870916d6253f35f9a9d4be17bb46d127c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_5bfcffb4",
+        "filename": "templates/add-disk-size-hint.sh.j2",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1001800
+      },
+      "writtenOn": "2016-11-10T17:42:03Z",
+      "side": 1,
+      "message": "Why not just add this all to the prep-images.sh.j2 file and then you don\u0027t have to rerun the introspection and add this to the doc generation, etc.?",
+      "revId": "fb332d2870916d6253f35f9a9d4be17bb46d127c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
