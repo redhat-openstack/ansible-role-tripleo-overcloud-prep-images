@@ -33,6 +33,24 @@
       "revId": "fb332d2870916d6253f35f9a9d4be17bb46d127c",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_1bde7710",
+        "filename": "templates/add-disk-size-hint.sh.j2",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000586
+      },
+      "writtenOn": "2016-11-10T18:40:50Z",
+      "side": 1,
+      "message": "agree, add lines 19-39 to the template that runs reg/introspection but make sure it\u0027s wrapped in a jinja variable if statement.. if disk_hints;",
+      "parentUuid": "baa041b7_5bfcffb4",
+      "revId": "fb332d2870916d6253f35f9a9d4be17bb46d127c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
