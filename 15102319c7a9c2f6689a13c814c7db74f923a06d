@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "baa041b7_d8cfea55",
+        "filename": "templates/overcloud-prep-images.sh.j2",
+        "patchSetId": 4
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1001800
+      },
+      "writtenOn": "2016-11-14T13:54:13Z",
+      "side": 1,
+      "message": "Please add |bool to make sure this works in every circumstance.",
+      "range": {
+        "startLine": 33,
+        "startChar": 6,
+        "endLine": 33,
+        "endChar": 27
+      },
+      "revId": "15102319c7a9c2f6689a13c814c7db74f923a06d",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_d8524a68",
+        "filename": "templates/overcloud-prep-images.sh.j2",
+        "patchSetId": 4
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1001800
+      },
+      "writtenOn": "2016-11-14T13:54:13Z",
+      "side": 1,
+      "message": "awk can do this by itself:\n\n    awk \u0027/power/ {print $2}\u0027",
+      "range": {
+        "startLine": 38,
+        "startChar": 36,
+        "endLine": 38,
+        "endChar": 68
+      },
+      "revId": "15102319c7a9c2f6689a13c814c7db74f923a06d",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_38eff687",
+        "filename": "templates/overcloud-prep-images.sh.j2",
+        "patchSetId": 4
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1001800
+      },
+      "writtenOn": "2016-11-14T13:54:13Z",
+      "side": 1,
+      "message": "Same thing with only one call to awk:\n\n    awk \u0027/\"disk\": / {gsub(/[\",]/, \"\", $2); print $2}\u0027 instackenv.json\n\n...but parsing json with awk is the way to insanity, so I\u0027d recommend using jq which is installed on the undercloud. This will print out the disk size of the first node:\n\n    jq \u0027.[\"nodes\"][0][\"disk\"] | tonumber\u0027 instackenv.json",
+      "range": {
+        "startLine": 43,
+        "startChar": 21,
+        "endLine": 43,
+        "endChar": 105
+      },
+      "revId": "15102319c7a9c2f6689a13c814c7db74f923a06d",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
